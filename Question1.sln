@@ -1,25 +1,37 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30330.147
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Question1", "Question1\Question1.csproj", "{B49D0CBA-857A-49BA-A2D4-16032CF85135}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B49D0CBA-857A-49BA-A2D4-16032CF85135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B49D0CBA-857A-49BA-A2D4-16032CF85135}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B49D0CBA-857A-49BA-A2D4-16032CF85135}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B49D0CBA-857A-49BA-A2D4-16032CF85135}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {538D90EC-D0B0-46C4-8EA2-C2CAB3B4D315}
-	EndGlobalSection
-EndGlobal
+using System;
+
+namespace Question1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // degisken tanimi
+            int sayi1, sayi2;
+
+            // sayilari disaridan alma islemi
+            Console.WriteLine("İlk sayiyi girin");
+            sayi1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("İkinci sayiyi girin");
+            sayi2 = Convert.ToInt32(Console.ReadLine());
+
+            // girilen degerleri ekrana sirasi ile yazdirma
+            Console.WriteLine("Yer degistirilmeden önceki degerler");
+            Console.WriteLine("Sayı 1={0}", sayi1);
+            Console.WriteLine("Sayı 2={0}", sayi2);
+
+            // ilk ve ikinci sayinin kaybolmamasini saglayan islemler
+            sayi1 = sayi1 + sayi2;
+            sayi2 = sayi1 - sayi2;
+            sayi1 = sayi1 - sayi2;
+
+            // degisimden sonraki sonuc
+            Console.WriteLine("************************************");
+            Console.WriteLine("Yer degistirildikten sonraki degerler");
+            Console.WriteLine("Sayı 1={0}", sayi1);
+            Console.WriteLine("Sayı 2={0}", sayi2);
+
+            Console.ReadKey();
+        }
+    }
+}
